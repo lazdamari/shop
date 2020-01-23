@@ -1,0 +1,9 @@
+<h4>{{title}}</h4>
+<div class="list-group">
+    <a href="#" class="list-group-item list-group-item-action active">
+        Tüm Kategoriler
+    </a>
+    <div *ngFor="let category of categories">
+        <a href="#" class="list-group-item list-group-item-action">{{category.name}}</a>
+    </div>
+</div>
