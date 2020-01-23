@@ -1,14 +1,15 @@
-import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
-import { FormsModule } from '@angular/forms';
+import { BrowserModule } from "@angular/platform-browser";
+import { NgModule } from "@angular/core";
+import { FormsModule } from "@angular/forms";
+import { HttpClientModule } from "@angular/common/http";
 
-import { AppRoutingModule } from './app-routing.module';
-import { AppComponent } from './app.component';
-import { NavComponent } from './nav/nav.component';
-import { CategoryComponent } from './category/category.component';
-import { ProductComponent } from './product/product.component';
-import { ProductFilterPipe } from './product/product-filter.pipe';
-import { AlertifyService } from './services/alertify.service';
+import { AppRoutingModule } from "./app-routing.module";
+import { AppComponent } from "./app.component";
+import { NavComponent } from "./nav/nav.component";
+import { CategoryComponent } from "./category/category.component";
+import { ProductComponent } from "./product/product.component";
+import { ProductFilterPipe } from "./product/product-filter.pipe";
+import { AlertifyService } from "./services/alertify.service";
 
 @NgModule({
   declarations: [
@@ -18,12 +19,8 @@ import { AlertifyService } from './services/alertify.service';
     ProductComponent,
     ProductFilterPipe
   ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    FormsModule
-  ],
+  imports: [BrowserModule, AppRoutingModule, FormsModule, HttpClientModule],
   providers: [AlertifyService], // buraya eklenirse global service
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {}
